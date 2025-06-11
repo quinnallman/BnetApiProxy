@@ -2,8 +2,8 @@ version: 2.1
 orbs:
   node: circleci/node@7.1.0
 jobs:
-  build_and_test: # this can be any name you choose
-    executor: node/default # use the default executor defined within the orb
+  build_and_test:
+    executor: node/default
     steps:
       - checkout
       - node/install-packages:
@@ -15,3 +15,7 @@ jobs:
           root: ~/project
           paths:
             - .
+workflows:
+  build_and_test_workflow:
+    jobs:
+      - build_and_test
