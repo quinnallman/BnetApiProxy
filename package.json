@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "node --env-file=.env app.js",
-    "build": "node --env-file=.env app.js",
+    "build": "echo \"Hi, this is a test.\" && exit 0",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
